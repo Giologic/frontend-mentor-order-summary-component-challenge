@@ -130,6 +130,7 @@ main {
   box-shadow: 0 10px 20px rgba(56, 42, 225, 0.3);
   opacity: 1;
   transition: opacity 300ms ease-in-out;
+  font-weight: 700;
 }
 
 .pricing-cta:hover {
