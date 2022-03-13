@@ -1,0 +1,176 @@
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(255,100%,100%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  background: var(--pale-blue);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  font-weight: 500;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-card {
+  width: 327px;
+  height: 567px;
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+}
+
+
+.card-content .card-title {
+  color: var(--dark-blue);
+}
+
+.card-content .card-caption {
+  color: var(--desaturated-blue);
+  line-height: 25px;
+  font-weight: 500;
+  padding: 0.5rem;
+}
+
+.card-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--very-pale-blue);
+  padding: 1rem;
+  border-radius: 11px;
+}
+
+.card-pricing a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: var(--bright-blue);
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.card-pricing a:hover {
+  opacity: 0.75;
+  text-decoration: none;
+}
+
+.card-pricing-info {
+  display: flex;
+  flex: 0 1;
+  align-items: center;
+}
+
+.card-pricing-info img {
+  margin-right: 1.25rem;
+}
+
+.card-pricing-info h2 {
+  white-space: nowrap;
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.card-pricing-info p {
+  color: var(--desaturated-blue);
+  font-size: 0.875rem;
+}
+
+.card-header img {
+  display: block;
+  width: 100%;
+}
+
+.pricing-cta {
+  background-color: var(--bright-blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.875rem 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(56, 42, 225, 0.3);
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.pricing-cta:hover {
+  opacity: 0.75;
+}
+
+.cancel-cta {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+  transition: color 300ms ease-in-out;
+  font-weight: 700;
+}
+
+.cancel-cta:hover {
+  color: var(--dark-blue);
+}
+
+/* Screen size greater than 520px and up */
+@media(min-width: 1440px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  .summary-card {
+    width: 450px;
+    height: 697px;
+  }
+
+  .card-content {
+    padding: 3rem;
+    gap: 32px;
+  }
+
+  .card-content .card-title {
+    font-size: 28px;
+  }
+
+  .card-content .card-caption {
+    line-height: 26px;
+    padding: 0rem;
+  }
+}
+
