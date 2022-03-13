@@ -42,12 +42,25 @@ main {
   align-items: center;
 }
 
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../images/pattern-background-mobile.svg') center/cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 350px;
+}
+
 .summary-card {
   width: 327px;
   height: 567px;
   background: var(--white);
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0 20px 15px rgba(56, 42, 225, 0.1);
 }
 
 .card-content {
@@ -148,6 +161,12 @@ main {
   color: var(--dark-blue);
 }
 
+@media(min-width: 780px) {
+  .background-image {
+    background: url('../images/pattern-background-desktop.svg') center/cover;
+    height: 437px;
+  }
+}
 /* Screen size greater than 520px and up */
 @media(min-width: 1440px) {
 
@@ -174,4 +193,3 @@ main {
     padding: 0rem;
   }
 }
-
